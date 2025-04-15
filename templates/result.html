@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Result - Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Prediction Result</h1>
+    </div>
+    <div class="alert alert-info" role="alert">
+        {# diabetes.py에서 전달된 res 변수(백분율) 표시 #}
+        The predicted probability of diabetes is: <strong>{{ res }}%</strong>
+    </div>
+    {# 이전 페이지(입력 폼)로 돌아가는 버튼 #}
+    <a href="{{ url_for('lab') }}" class="btn btn-secondary mt-3">Go Back</a>
+</div>
+{% endblock %}

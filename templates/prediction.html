@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% import "bootstrap5/form.html" as wtf %} {# bootstrap-flask 폼 렌더링 임포트 #}
+
+{% block title %}Diagnostic - Diabetes Prediction{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Fill in the data</h1>
+    </div>
+    {# Flask-WTF 폼 렌더링 #}
+    {{ wtf.render_form(form) }}
+</div>
+{% endblock %}
